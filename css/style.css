@@ -68,7 +68,18 @@ img {
 
 /*---------- header --------*/
 .header {
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 .header .container {
@@ -100,8 +111,10 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--main-title-color);
+    color: #404bbf;;
     padding: 24px 0;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav-link:hover,
@@ -124,6 +137,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--address-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .header-address-link:hover,
@@ -262,6 +276,9 @@ img {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     width: 24%;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .staff-item-title {
@@ -281,6 +298,10 @@ img {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+}
+
+.staff-info {
+    padding: 32px 0;
 }
 /*---------- footer --------*/
 .footer {
@@ -412,18 +433,18 @@ img {
     border-radius: 4px;
 }
 
-.staff-link-list{
+.staff-link-list {
     list-style: none;
     font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     padding: 0;
     margin: 0;
 
 }
-.link-item{
+.link-item {
     width: 40px;
     height: 40px;
 }
@@ -452,7 +473,7 @@ img {
     padding: 120px 0;
 }
 
-.cust-title{
+.cust-title {
     font-weight: 500;
     font-size: 36px;
     line-height: 1.11;
@@ -498,6 +519,7 @@ img {
     display: flex;
     gap: 120px;
     align-items: baseline;
+    margin-right: 120px;
 }
 
 .media-title {
