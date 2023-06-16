@@ -29,6 +29,11 @@ body {
     background-color: #FFFFFF;
 }
 
+h1,h2,h3,h4,h5, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -209,7 +214,7 @@ img {
 /*---------- main   section1 --------*/
 
 .features {
-    padding: 120px 0;
+    padding-top: 120px;
 }
 
 .features-item {
